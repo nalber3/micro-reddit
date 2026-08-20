@@ -10,21 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_08_13_164555) do
-  create_table "posts", force: :cascade do |t|
-    t.integer "User_id", null: false
-    t.text "comment"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["User_id"], name: "index_posts_on_User_id"
-  end
-
+ActiveRecord::Schema[8.1].define(version: 2026_08_13_163925) do
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.string "email", limit: 30
     t.string "name", limit: 100
     t.datetime "updated_at", null: false
   end
-
-  add_foreign_key "posts", "Users"
 end
